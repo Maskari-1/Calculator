@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-800">
+    <div class="p-10 rounded-2xl">
+        <div class="bg-black px-4 py-3 mx-auto max-w-[500px] justify-center gap-10 flex flex-wrap pt-6 rounded-2xl">
+            <div id="display"
+                class="bg-gray-800 mx-auto max-w-[500px] w-full p-10 px-4 text-right text-white text-4xl bg">
+            </div>
+            <div
+                class="px-4 py-3 mx-auto max-w-[500px] justify-center gap-10 flex flex-wrap font-bold text-2xl hover:shadow-2xl rounded-2xl">
+                <div class="gap-10 flex">
+                    <button onclick="clearDisplay()"
+                        class="bg-[#A5A5A5] px-5 py-2 rounded-full text-[#FFF] text-lg hover:shadow-2xl text-center justify-center">AC</button>
+                    <button onclick="currentDisplay()"
+                        class="bg-[#A5A5A5] px-4 py-2 rounded-full text-[#FFF] text-lg">DEL</button>
+                    <button onclick="numberSaver('')" id=""
+                        class="bg-[#A5A5A5] px-5 py-2 rounded-full text-[#FFF]">%</button>
+                    <button onclick="operationSelector('/')"
+                        class="bg-[#F89B10] px-7 py-4 rounded-full text-[#FFF]">/</button>
+                </div>
+                <div class="gap-10 flex">
+                    <button onclick="numberSaver(7)" id=""
+                        class="bg-[#333] px-6 py-4 rounded-full text-[#FFF]">7</button>
+                    <button onclick="numberSaver(8)" id=""
+                        class="bg-[#333] px-6 py-4 rounded-full text-[#FFF]">8</button>
+                    <button onclick="numberSaver(9)" id=""
+                        class="bg-[#333] px-6 py-4 rounded-full text-[#FFF]">9</button>
+                    <button onclick="operationSelector('*')" id=""
+                        class="bg-[#F89B10] px-7 py-4 rounded-full text-[#FFF]">*</button>
+                </div>
+                <div class="gap-10 flex">
+                    <button onclick="numberSaver(4)" id=""
+                        class="bg-[#333] px-6 py-4 rounded-full text-[#FFF]">4</button>
+                    <button onclick="numberSaver(5)" id=""
+                        class="bg-[#333] px-6 py-4 rounded-full text-[#FFF]">5</button>
+                    <button onclick="numberSaver(6)" id=""
+                        class="bg-[#333] px-6 py-4 rounded-full text-[#FFF]">6</button>
+                    <button onclick="operationSelector('-')" id=""
+                        class="bg-[#F89B10] px-7 py-2 rounded-full text-[#FFF]">-</button>
+                </div>
+                <div class="gap-10 flex">
+                    <button onclick="numberSaver(1)" id=""
+                        class="bg-[#333] px-6 py-4 rounded-full text-[#FFF]">1</button>
+                    <button onclick="numberSaver(2)" id=""
+                        class="bg-[#333] px-6 py-4 rounded-full text-[#FFF]">2</button>
+                    <button onclick="numberSaver(3)" id=""
+                        class="bg-[#333] px-6 py-2 rounded-full text-[#FFF]">3</button>
+                    <button onclick="operationSelector('+')" id=""
+                        class="bg-[#F89B10] px-6 py-2 rounded-full text-[#FFF]">+</button>
+                </div>
+                <div class="gap-8 flex">
+                    <button onclick="numberSaver(0)" id=""
+                        class="bg-[#333] px-20 py-3 rounded-full text-[#FFF]">0</button>
+                    <button onclick="numberSaver('.')"
+                        class="bg-[#333] px-7 py-2 rounded-full text-[#FFF]">.</button>
+                    <button onclick="numberSaver('=')" id=""
+                        class="bg-[#F89B10] px-6 py-4 rounded-full text-[#FFF]">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+   
+</body>
+
+</html>
