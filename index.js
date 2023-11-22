@@ -13,8 +13,11 @@ let num1 = "";
         }
 
         function operationSelector(oper) {
-            operation = oper;
-            document.getElementById("display").innerHTML = num1 + operation;
+            if(operation){
+                calculate(oper)
+            } else{ 
+                operation = oper;
+            document.getElementById("display").innerHTML = num1 + operation + num2;} 
         }
 
         function clearDisplay() {
@@ -23,7 +26,6 @@ let num1 = "";
             operation = "";
             document.getElementById("display").innerHTML = '';
         }
-
         function currentDisplay() {
             if (num2) {
                 num2 = num2.slice(0, -1);
@@ -32,18 +34,14 @@ let num1 = "";
             } else {
                 num1 = num1.slice(0, -1);
             }
-        
             document.getElementById("display").innerHTML = num1 + operation + num2;
         }
-        function currentDisplay() {
-            if (num2) {
-                num2 = num2.slice(0, -1);
-            } else if (operation) {
-                operation = operation.slice(0, -1);
-            } else {
-                num1 = num1.slice(0, -1);
+        function calculate(oper) {
+            if (num2 !=='' && operation !== '') {
+                const result = eval(`${num1} ${operation} ${num2}`);
+                document.getElementById("display").innerHTML = result + oper || "";
+                num1 = result;
+                num2 = '';
+                operation = oper |'';
             }
-        
-            document.getElementById("display").innerHTML = num1 + operation + num2;
-        }
-        
+          }
