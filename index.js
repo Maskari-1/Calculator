@@ -24,7 +24,7 @@ let num1 = "";
             num1 = "";
             num2 = "";
             operation = "";
-            document.getElementById("display").innerHTML = '';
+            document.getElementById("display").innerHTML = '&nbsp;';
         }
         function currentDisplay() {
             if (num2) {
